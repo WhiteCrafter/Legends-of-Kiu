@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/BesikPong/Scenes/DifficultySelect.unity
     guid: 5dca423fb59611a4dab7d0a9c241a6d3
   - enabled: 1
-    path: Assets/BesikPong/Scenes/Easy mode.unity
-    guid: 61ef3ed932c5b1f4a858865f57b5ff92
-  - enabled: 1
     path: Assets/BesikPong/Scenes/Hard.unity
     guid: 905ae859a8c476141aa9d1430f69e296
+  - enabled: 1
+    path: Assets/BesikPong/Scenes/Easy mode.unity
+    guid: 61ef3ed932c5b1f4a858865f57b5ff92
   - enabled: 1
     path: Assets/BesikPong/Scenes/wolfgangCutscene.unity
     guid: ff23336724ad36d4588a3308d4521de8
