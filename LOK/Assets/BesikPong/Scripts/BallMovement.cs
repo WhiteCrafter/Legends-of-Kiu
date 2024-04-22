@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
+
 
 public class BallMovement : MonoBehaviour
 {
@@ -15,6 +17,9 @@ public class BallMovement : MonoBehaviour
 
     public Text playerScore;
     public Text opponentsScore;
+
+    public AudioSource hit;
+    public AudioSource score;
 
     private int hitCounter=0;
     private Rigidbody2D rb;
@@ -73,7 +78,9 @@ public class BallMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.name == "Player"||collision.gameObject.name == "Opponent"){
             PlayerBounce(collision.transform);
-        }
+            
+        } 
+        hit.Play();
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
@@ -85,6 +92,7 @@ public class BallMovement : MonoBehaviour
             opponentsScore.text = (int.Parse(opponentsScore.text)+1).ToString();
             Invoke("ResetBall",0.1f);
         }
+        score.Play();
     }
 
 }

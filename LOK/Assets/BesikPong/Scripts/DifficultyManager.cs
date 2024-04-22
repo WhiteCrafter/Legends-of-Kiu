@@ -11,15 +11,15 @@ public class DifficultyManager : MonoBehaviour
     }
 
     public void LoadMedium(){
-        SceneManager.LoadScene(4);
-    }
-
-    public void LoadHard(){
         SceneManager.LoadScene(2);
     }
 
-    public void LoadImpossible(){
+    public void LoadHard(){
         SceneManager.LoadScene(3);
+    }
+
+    public void LoadImpossible(){
+        SceneManager.LoadScene(4);
     }
 
     public void QuitGame(){
