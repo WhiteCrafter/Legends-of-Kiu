@@ -10,7 +10,7 @@ public class BallMovement : MonoBehaviour
 {
 
     public float initialSpeed=10;
-    public float speedIncrease=0.25f;
+    public float speedIncrease;
 
     private int playerPoints;
     private int opponentsPoints;
@@ -23,6 +23,8 @@ public class BallMovement : MonoBehaviour
 
     private int hitCounter=0;
     private Rigidbody2D rb;
+
+    public GameObject tip;
 
     // Start is called before the first frame update
     void Start()
@@ -93,6 +95,7 @@ public class BallMovement : MonoBehaviour
             Invoke("ResetBall",0.1f);
         }
         score.Play();
+        tip.SetActive(false);
     }
 
 }
