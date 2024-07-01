@@ -7,6 +7,12 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
     public bool IsAi;
+
+    public bool p2;
+
+    public GameObject player;
+
+    
     public GameObject ball;
 
     public float ballRange;
@@ -33,7 +39,21 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void PlayerControl(){
-        playerMove=new Vector2(0,Input.GetAxisRaw("Vertical"));
+        if(!p2){
+            if(Input.GetKeyDown(KeyCode.W)){
+                playerMove= new Vector2(0,1);
+            }
+            if(Input.GetKeyDown(KeyCode.S)){
+                playerMove= new Vector2(0,-1);
+            }
+        }else{
+            if(Input.GetKeyDown(KeyCode.UpArrow)){
+                playerMove= new Vector2(0,1);
+            }
+            if(Input.GetKeyDown(KeyCode.DownArrow)){
+                playerMove= new Vector2(0,-1);
+            }
+        }
         if(Input.GetKeyDown(KeyCode.Escape)){
             SceneManager.LoadScene(0);
         }
@@ -52,6 +72,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void FixedUpdate(){
-        rb.velocity = playerMove*moveSpeed; 
+        float distanceUp = player.transform.position.y+1;
+        float distanceDown = player.transform.position.y-1;
+        while(player.transform.position.y!=distanceUp||player.transform.position.y!=distanceDown){
+            rb.velocity = playerMove*moveSpeed; 
+        }
+        
     }
 }
