@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -403,7 +402,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'W/S to move
 
-    Press Esq to quit '
+    Press Esc to quit '
 --- !u!222 &180342482
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -602,6 +601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 20
   IsAi: 1
+  p2: 0
   ball: {fileID: 1407309373}
   ballRange: 0.9
 --- !u!212 &262305599
@@ -1563,6 +1563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 15
   IsAi: 0
+  p2: 0
   ball: {fileID: 1407309373}
   ballRange: 0
 --- !u!212 &1416335143

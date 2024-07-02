@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -438,7 +437,6 @@ MonoBehaviour:
   moveSpeed: 15
   IsAi: 0
   p2: 1
-  player: {fileID: 0}
   ball: {fileID: 1407309373}
   ballRange: 0
 --- !u!212 &161702171
@@ -1015,7 +1013,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &950216275
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1412,15 +1410,15 @@ RectTransform:
   m_GameObject: {fileID: 1198393723}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1976944889}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18, y: -440}
-  m_SizeDelta: {x: 500, y: 100}
+  m_AnchoredPosition: {x: -18, y: -404}
+  m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1198393725
 MonoBehaviour:
@@ -1444,7 +1442,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 35
+    m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -1455,9 +1453,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'W/S to move
+  m_Text: 'W/S and UpArrow / DownArrow to move
 
-    Press Esq to quit '
+    Press Esc to quit '
 --- !u!222 &1198393726
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1695,8 +1693,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334656bb6d730ef45887301e6b85ee02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialSpeed: 13
-  speedIncrease: 0.25
+  initialSpeed: 20
+  speedIncrease: 0.5
   playerScore: {fileID: 249924252}
   opponentsScore: {fileID: 520524986}
   hit: {fileID: 1098255551}
@@ -1737,7 +1735,6 @@ MonoBehaviour:
   moveSpeed: 15
   IsAi: 0
   p2: 0
-  player: {fileID: 0}
   ball: {fileID: 1407309373}
   ballRange: 0
 --- !u!212 &1416335143
@@ -2336,9 +2333,9 @@ SceneRoots:
   - {fileID: 1407309376}
   - {fileID: 615153958}
   - {fileID: 1416335144}
+  - {fileID: 161702172}
   - {fileID: 1976944889}
   - {fileID: 1351698614}
   - {fileID: 1098255552}
   - {fileID: 241085246}
   - {fileID: 950216276}
-  - {fileID: 161702172}

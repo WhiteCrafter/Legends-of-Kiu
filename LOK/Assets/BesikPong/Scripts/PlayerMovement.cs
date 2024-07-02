@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,20 +11,20 @@ public class PlayerMovement : MonoBehaviour
 
     public bool p2;
 
-    public GameObject player;
-
+   
     
     public GameObject ball;
 
     public float ballRange;
     private Rigidbody2D rb;
     private Vector2 playerMove;
-
+    
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
@@ -55,7 +56,10 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         if(Input.GetKeyDown(KeyCode.Escape)){
-            SceneManager.LoadScene(0);
+          
+           SceneManager.LoadScene(0);
+            
+            
         }
     }
 
@@ -72,11 +76,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void FixedUpdate(){
-        float distanceUp = player.transform.position.y+1;
-        float distanceDown = player.transform.position.y-1;
-        while(player.transform.position.y!=distanceUp||player.transform.position.y!=distanceDown){
-            rb.velocity = playerMove*moveSpeed; 
-        }
         
+         rb.velocity = playerMove*moveSpeed;
+    
+    
     }
 }

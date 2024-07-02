@@ -17,6 +17,6 @@ public class SM : MonoBehaviour
 
     IEnumerator NextScene(){
         yield return new WaitForSeconds(10f);
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(6);
     }
 }
