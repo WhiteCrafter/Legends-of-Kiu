@@ -44,4 +44,5 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/FlappyWolf/Scenes/Marcus.unity
     guid: 2f7c6f93eba035a49877bd895db9b69f
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: a50f7f6122109cb4d9f774f551b238f4, type: 2}

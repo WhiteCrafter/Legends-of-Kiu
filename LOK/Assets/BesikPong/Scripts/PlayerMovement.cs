@@ -16,7 +16,10 @@ public class PlayerMovement : MonoBehaviour
     public GameObject ball;
 
     public float ballRange;
+
     private Rigidbody2D rb;
+
+  
     private Vector2 playerMove;
     
 
@@ -40,20 +43,21 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void PlayerControl(){
+
+        float pl1 = Input.GetAxis("Vertical");
+
+        float pl2 = Input.GetAxis("Vertical2");
+
+
+
         if(!p2){
-            if(Input.GetKeyDown(KeyCode.W)){
-                playerMove= new Vector2(0,1);
-            }
-            if(Input.GetKeyDown(KeyCode.S)){
-                playerMove= new Vector2(0,-1);
-            }
+        
+         playerMove = new Vector2(0,pl1);
+        
         }else{
-            if(Input.GetKeyDown(KeyCode.UpArrow)){
-                playerMove= new Vector2(0,1);
-            }
-            if(Input.GetKeyDown(KeyCode.DownArrow)){
-                playerMove= new Vector2(0,-1);
-            }
+           
+         playerMove = new Vector2(0,pl2);
+           
         }
         if(Input.GetKeyDown(KeyCode.Escape)){
           
