@@ -44,9 +44,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void PlayerControl(){
 
-        float pl1 = Input.GetAxis("Vertical");
+        float pl1 = Input.GetAxisRaw("Vertical");
 
-        float pl2 = Input.GetAxis("Vertical2");
+        float pl2 = Input.GetAxisRaw("Vertical2");
 
 
 
@@ -60,9 +60,12 @@ public class PlayerMovement : MonoBehaviour
            
         }
         if(Input.GetKeyDown(KeyCode.Escape)){
-          
-           SceneManager.LoadScene(0);
-            
+         if(SceneManager.GetActiveScene().buildIndex==7||SceneManager.GetActiveScene().buildIndex==1){
+            SceneManager.LoadScene(0);
+          }
+         else{
+            SceneManager.LoadScene(1);
+            }
             
         }
     }
