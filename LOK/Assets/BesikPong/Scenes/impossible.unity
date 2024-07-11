@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -599,11 +600,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf06c5dbab068f48aa765d9aa0e7b53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 20
+  moveSpeed: 25
   IsAi: 1
   p2: 0
   ball: {fileID: 1407309373}
-  ballRange: 0.9
+  ballRange: 0.6
 --- !u!212 &262305599
 SpriteRenderer:
   m_ObjectHideFlags: 0
